@@ -31,6 +31,7 @@ pipeline {
                 
             }
         }
+    
         
         stage('Build') {
             steps {
@@ -75,6 +76,7 @@ pipeline {
                 sh 'yes | sudo cp -R bundle.tar.gz /var/www/html/ && cd /var/www/html/ && sudo tar -xvf bundle.tar.gz'
                 echo 'Copy completed'
                 sh 'sudo cp -R /var/www/html/dist/mutualfund/*  /var/www/html/'
+                sh 'systemctl restart apache2'
             }
         }
     }
