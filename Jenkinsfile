@@ -43,7 +43,7 @@ pipeline {
         
         stage('Package Build') {
             steps {
-                sh 'tar -zcvf bundle.tar.gz dist'
+                sh 'tar -zcvf bundle.tar.gz dist/mutualfund/'
             }
         }
         
@@ -71,7 +71,7 @@ pipeline {
                 echo 'Artifacts copied'
                 
                 echo 'Copy'
-                sh 'yes | sudo cp -R bundle.tar.gz /home/ubuntu/jenkins && cd /home/ubuntu/jenkins && sudo tar -xvf bundle.tar.gz'
+                sh 'yes | sudo cp -R bundle.tar.gz /var/www/html/ && cd /var/www/html/ && sudo tar -xvf bundle.tar.gz'
                 echo 'Copy completed'
             }
         }
