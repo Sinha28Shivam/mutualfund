@@ -71,9 +71,10 @@ pipeline {
                 echo 'Artifacts copied'
                 
                 echo 'Copy'
-                sh 'sudo rm -rf /var/www/html/* &&  sudo cp -R /var/www/html/dist/mutualfund/*  /var/www/html/s'
+                sh 'sudo rm -rf /var/www/html/* '
                 sh 'yes | sudo cp -R bundle.tar.gz /var/www/html/ && cd /var/www/html/ && sudo tar -xvf bundle.tar.gz'
                 echo 'Copy completed'
+                sh 'sudo cp -R /var/www/html/dist/mutualfund/*  /var/www/html/'
             }
         }
     }
