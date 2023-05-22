@@ -1,11 +1,3 @@
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #000;
-  color: #ffffff;
-}
 .logo {
   display: flex;
   align-items: center;
@@ -136,12 +128,11 @@ main {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serifs;
   color: #fff;
 }
-/* .card {
+.card {
   width: 164px;
   height: 160px;
   margin-right: 20px;
-
-} */
+}
 /* .top-h {
   color: #ed116585;
   margin-left: 100px;
@@ -155,26 +146,20 @@ body{
 }
 .cool-card{
   transform: scale(1);
- transition: all 300ms ease-in-out;
+ transition: all 150ms ease-in;
 }
 
 .cool-card:hover{
-  transform: scale(1.12);
+  transform: scaleX(1.12);
   z-index: 500;
-  width:  25%;
-
+  /* width:  ; */
+  
 }
 .card{
-  transition: all 400ms ease-in-out;
-  overflow-block: hidden;
-  width: 164px;
-  height:160px
-
+  transition: all 150ms ease-in;
 }
-
-
 .cool-card:hover .card{
-
+ 
   background-color: rgba(222, 222, 222, 0.7);
   z-index: 500;
   backdrop-filter: blur(4px);
@@ -188,7 +173,7 @@ body{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all 400ms ease-in-out;
+  transition: all 150ms ease-in;
 }
 .cool-card:hover .card-title{
   /* white-space: wrap; */
@@ -197,18 +182,15 @@ body{
  font-size: medium;
   max-width: 35ch;
   margin-bottom: 4rem;
-}
+} 
 
 a{
   text-decoration: none;
 }
-.container-fluid{
-  display: block;
+
+/* .row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   flex-wrap: nowrap;
-}
-
-
-
-
-
-
+} */

@@ -1,4 +1,4 @@
-import { Component ,OnInit } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
 import { MutualFundService } from 'src/app/services/mutual-fund.service';
 import { ApiService } from 'src/app/services/api.service';
 import { Router } from '@angular/router';
@@ -34,6 +34,8 @@ export class DashboardHomeComponent implements OnInit{
 
     });
   }
+
+
   fetchById(schemaId: number): void {
     this.api.detailById(schemaId).subscribe((data) => {
       this.data = data;
@@ -42,13 +44,9 @@ export class DashboardHomeComponent implements OnInit{
 
   }
 
-  options: AnimationOptions = {
-    path: '../../../assets/135363-mutual-funds-investment.json',
-  };
-
-
-  animationCreated(animationItem: AnimationItem): void {
-    console.log(animationItem);
+  toggleDetails(fund: any) {
+    fund.showDetails = !fund.showDetails;
+  }
 
 
 
@@ -59,15 +57,14 @@ export class DashboardHomeComponent implements OnInit{
       });
   }
 
-    // console.log('Constructor Called');
-    // this.mutualfund.getData().subscribe(data => {
-    //   this.flag=data;
-    //   console.log(data)
 
-    // },
-    //   (error)=>
-    //   {
-    //     console.error('Error 404 Not Found'); this.error=error; })
+  options: AnimationOptions = {
+    path: '../../../assets/135363-mutual-funds-investment.json',
+  };
+
+
+  animationCreated(animationItem: AnimationItem): void {
+    console.log(animationItem);
 
 }
 }

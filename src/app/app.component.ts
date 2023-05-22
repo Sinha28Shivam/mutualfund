@@ -1,5 +1,6 @@
 import { ExternalExpr } from '@angular/compiler';
 import { Component} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { from, Observable,of,map, Subscriber, Subscription,first } from 'rxjs';
 
 @Component({
@@ -9,7 +10,10 @@ import { from, Observable,of,map, Subscriber, Subscription,first } from 'rxjs';
 })
 export class AppComponent {
   title = 'mutualfund';
+  shownav:boolean=true
+  constructor(private route:ActivatedRoute){
 
+  }
   // numbers : number[] = []
   // val1 : number = 0
 

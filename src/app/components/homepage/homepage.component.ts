@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 import { MutualFundService } from 'src/app/services/mutual-fund.service';
 @Component({
   selector: 'app-homepage',
@@ -9,7 +10,7 @@ export class HomepageComponent {
   fundsName:any[]=[]
   allTopData:any[]=[]
   allBottomData:any[]=[]
-  constructor(private api:MutualFundService) {
+  constructor(private api:MutualFundService, private loginservice: LoginService) {
     
   }
   ngOnInit(){
@@ -23,5 +24,11 @@ export class HomepageComponent {
       console.log(this.allBottomData);
     })
   }
+  logout(){
+    this.loginservice.logout()
+    }
+    isLoggedIn(){
+      return this.loginservice.isLoggedIn()
+      }
 
 }

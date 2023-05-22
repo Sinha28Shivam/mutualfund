@@ -17,12 +17,10 @@ export class LoginComponent {
 
   ngOnInit(): void {
 
-  //  let user:HTMLInputElement|any = document.getElementById('user')
-  //  this.credentials.username=user.value
-  // user.value=''
-  // if(this.loginService.isLoggedIn()){
-  //   this.router.navigate(["/dashboard"])
-  // }
+   
+  if(this.loginService.isLoggedIn()){
+    this.router.navigate(["/dashboard"])
+  }
   }
 
   onSubmit(){

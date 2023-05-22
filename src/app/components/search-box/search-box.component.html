@@ -25,10 +25,6 @@
               
               [routerLink]="'/homepage/mutual-funds/' + result.schemaId"
             >
-            [routerLink]="'dashboard/allfundsdetail/' + result.schemaId"
-              class="text-decoration-none">
-
-
               {{ result.schemaName }} {{ result.schemaCategory }}
               {{ result.fundHouse }}
             </a>
@@ -37,3 +33,42 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+  <!-- <div class="container mt-3" style="width: 600px">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="position-relative">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search..."
+            (keyup)="onKeyUp($event)"
+            #inputRef
+          />
+          <div
+            class="list-group mt-2 position-absolute w-100"
+            *ngIf="searchValue && results.length > 0"
+          >
+            <button
+              type="button"
+              class="list-group-item list-group-item-action"
+              *ngFor="let result of results"
+            >
+              <a
+              [routerLink]="'allfundsdetail/' + result.schemaId"
+                class="text-decoration-none">
+  
+  
+                {{ result.schemaName }} {{ result.schemaCategory }}
+                {{ result.fundHouse }}
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+   -->
